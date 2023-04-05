@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Sports Registry</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="#" />
+	</head>
+	<body class="is-preload">
+		<h1>Sports Registry</h1>
+		{% for message in messages %}
+		<div class="alert alert-{{ message.tags }} alert-disissible fade show" role="alert">
+			<strong>Message:</strong> {{ message }}
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		{% endfor %}
+
+		{% if user.is_authenticated %}
+			<h3> Hello, {{ firstname }}</h3>
+			<h4>You are Logged in</h4>
+			<a href="/signout" class="button big">Signout</a>
+
+			{% else %}
+			<a href="/signup" class="button big">SignUp</a>
+			<a href="/signin" class="button big">Signin</a>
+			{% endif %}
+
+
+	</body>
+</html>

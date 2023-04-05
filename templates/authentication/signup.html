@@ -1,0 +1,37 @@
+<div class="form">
+    <div id="signup">   
+        <h1>Sign Up for Free</h1>
+        
+        <form action="/signup" method="post">
+            {% csrf_token %}
+            <div class="field-wrap">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="john123"/>
+            </div>
+            <div class="field-wrap">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Johnny"/>
+            </div>
+            <div class="field-wrap">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Rico"/>
+            </div>
+            <div class="field-wrap">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john123@mail.com"/>
+            </div>
+            <div class="field-wrap">
+                <label for="password">Set A Password</label>
+                <input type="password" id="password" name="password"/>
+            </div>
+            <div class="field-wrap">
+                <label for="passwordtwo">Confirm Password</label>
+                <input type="password" id="passwordtwo" name="passwordtwo"/>
+            </div>
+            <button type="submit" class="button button-block"/>Signup</button>
+        </form>
+      </div>
+    </div>
+
+    
+</div> <!-- /form -->
